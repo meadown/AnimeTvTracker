@@ -1,8 +1,9 @@
 # AnimeTvTracker
 This animation helps user to get all the  animated movie details in one place. 
 
-Functionalities
-• Everything is updated in real time
+Functionalities :
+
+ • Everything is updated in real time
  • No registration required
  • Discover Top Rated, Popular, Up Coming Anime List
  • Discover 5000+ Anime with full information
@@ -13,11 +14,11 @@ Functionalities
  • Save and manage anime movies in your favourite list.
 
 Framewors used:
-Accelerate
-CFNetwork
-Foundetion
-Security
-SystemConfiguretion
+- Accelerate
+- CFNetwork
+- Foundetion
+- Security
+- SystemConfiguretion
 
 CoCapods Used:
 - Alamofire
