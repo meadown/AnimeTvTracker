@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="40" id="KGk-i7-Jjw" customClass="SettingCell" customModule="AnimeTvTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFb-cQ-piS">
+                        <rect key="frame" x="20" y="6.5" width="31" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XFb-cQ-piS" secondAttribute="height" multiplier="1:1" id="nOO-Zi-2aY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fp-xh-hDX">
+                        <rect key="frame" x="71" y="12" width="41.5" height="20"/>
+                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XFb-cQ-piS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="FAa-J2-e9V"/>
+                    <constraint firstItem="7Fp-xh-hDX" firstAttribute="centerY" secondItem="XFb-cQ-piS" secondAttribute="centerY" id="GkI-co-ywE"/>
+                    <constraint firstItem="XFb-cQ-piS" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="Ip1-pQ-Vuw"/>
+                    <constraint firstItem="7Fp-xh-hDX" firstAttribute="leading" secondItem="XFb-cQ-piS" secondAttribute="trailing" constant="20" id="O11-Ue-abb"/>
+                    <constraint firstItem="XFb-cQ-piS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cLw-I9-Uz0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="71" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="imgView" destination="XFb-cQ-piS" id="hve-2K-ccB"/>
+                <outlet property="lblName" destination="7Fp-xh-hDX" id="8X5-xz-8dC"/>
+            </connections>
+            <point key="canvasLocation" x="53.623188405797109" y="39.508928571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

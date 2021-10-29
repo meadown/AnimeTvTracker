@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoVC" customModule="AnimeTvTracker" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDismiss" destination="Gce-n7-KeG" id="Qpo-Lg-8kh"/>
+                <outlet property="collectionView" destination="sHe-V4-r1i" id="1Wh-rU-zQK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="qSZ-mm-l33" id="NBm-A0-oNZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSZ-mm-l33">
+                    <rect key="frame" x="0.0" y="208.5" width="375" height="250"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qSZ-mm-l33" secondAttribute="height" multiplier="1.5:1" id="Ubx-Cw-elY"/>
+                    </constraints>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gce-n7-KeG">
+                    <rect key="frame" x="321" y="20" width="34" height="34"/>
+                    <color key="backgroundColor" name="Primary"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="9TR-Xl-MfR"/>
+                        <constraint firstAttribute="width" secondItem="Gce-n7-KeG" secondAttribute="height" multiplier="1:1" id="xf2-GU-wpF"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="xmark" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" scale="medium" weight="bold"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="17"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnDismissPressed:" destination="-1" eventType="touchUpInside" id="UEc-9M-LU9"/>
+                    </connections>
+                </button>
+                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sHe-V4-r1i">
+                    <rect key="frame" x="0.0" y="478.5" width="375" height="162.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aS6-a7-P8Y">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sHe-V4-r1i" firstAttribute="top" secondItem="qSZ-mm-l33" secondAttribute="bottom" constant="20" id="0L0-Jl-I2s"/>
+                <constraint firstItem="sHe-V4-r1i" firstAttribute="height" secondItem="qSZ-mm-l33" secondAttribute="height" multiplier="0.65" id="7Oi-ax-DeF"/>
+                <constraint firstItem="qSZ-mm-l33" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GrP-xv-Hhb"/>
+                <constraint firstItem="sHe-V4-r1i" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IJE-nW-pWj"/>
+                <constraint firstItem="sHe-V4-r1i" firstAttribute="width" secondItem="qSZ-mm-l33" secondAttribute="width" id="MwM-SJ-O5t"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gce-n7-KeG" secondAttribute="trailing" constant="20" id="brh-hA-VC5"/>
+                <constraint firstItem="Gce-n7-KeG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="eZG-tu-i20"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qSZ-mm-l33" secondAttribute="trailing" id="ge5-OZ-VRF"/>
+                <constraint firstItem="qSZ-mm-l33" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="tiy-yg-CjJ"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="56"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="Primary">
+            <color red="0.83529411764705885" green="0.082352941176470587" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

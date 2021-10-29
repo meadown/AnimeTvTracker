@@ -1,0 +1,6 @@
+framework module Pods_AnimeTvTracker {
+  umbrella header "Pods-AnimeTvTracker-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZkR-hw-CEz">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SettingVC-->
+        <scene sceneID="90d-4d-JG3">
+            <objects>
+                <viewController id="7Dx-hC-J02" customClass="SettingVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yiv-nR-oDH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ac-Xv-Ndc">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ebs-l5-8Gb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ebs-l5-8Gb" firstAttribute="bottom" secondItem="0ac-Xv-Ndc" secondAttribute="bottom" id="04K-6o-f3I"/>
+                            <constraint firstItem="0ac-Xv-Ndc" firstAttribute="top" secondItem="ebs-l5-8Gb" secondAttribute="top" id="WM1-cA-RvT"/>
+                            <constraint firstItem="ebs-l5-8Gb" firstAttribute="trailing" secondItem="0ac-Xv-Ndc" secondAttribute="trailing" id="jPp-7G-4Ik"/>
+                            <constraint firstItem="0ac-Xv-Ndc" firstAttribute="leading" secondItem="ebs-l5-8Gb" secondAttribute="leading" id="xIU-Lt-1Ze"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uui-oL-vTl"/>
+                    <connections>
+                        <outlet property="tableView" destination="0ac-Xv-Ndc" id="ZGD-dh-Oae"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwl-4g-Igp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="1497"/>
+        </scene>
+        <!--NavigationVC-->
+        <scene sceneID="1cs-ei-rbz">
+            <objects>
+                <navigationController id="WZZ-0M-Ul5" customClass="NavigationVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="92a-58-Z9K"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8uJ-VK-7il">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VH4-MS-xYW" kind="relationship" relationship="rootViewController" id="IkO-F6-YhM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnX-Gd-mG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="-698"/>
+        </scene>
+        <!--SearchCVC-->
+        <scene sceneID="xcr-ec-nma">
+            <objects>
+                <collectionViewController id="UNG-Q9-Tas" customClass="SearchCVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qbK-95-g9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="20" id="ZtU-mH-5vN">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5ck-ez-QFP">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S9d-Lp-u32">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="UNG-Q9-Tas" id="AZY-iJ-7N9"/>
+                            <outlet property="delegate" destination="UNG-Q9-Tas" id="N1g-pU-htM"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="LrA-cD-hTL"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bG-5s-1Au" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671" y="133"/>
+        </scene>
+        <!--SearchVC-->
+        <scene sceneID="BKA-dv-ufL">
+            <objects>
+                <viewController id="ogM-jZ-8hQ" customClass="SearchVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIG-sd-Izh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jFN-9i-zTv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ikV-q1-hRC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xar-PC-KKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3394" y="34"/>
+        </scene>
+        <!--FavouriteVC-->
+        <scene sceneID="V59-bf-DlH">
+            <objects>
+                <viewController id="f6k-Cm-qEc" customClass="FavouriteVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2aj-xz-ThN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XkE-55-27p">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="20" id="QWb-Bv-gy0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="20" maxX="15" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="W9N-4k-pFC">
+                                        <rect key="frame" x="15" y="20" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3rO-pP-430">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vez-zq-8lI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vez-zq-8lI" firstAttribute="trailing" secondItem="XkE-55-27p" secondAttribute="trailing" id="1Xc-6e-XGe"/>
+                            <constraint firstItem="XkE-55-27p" firstAttribute="leading" secondItem="Vez-zq-8lI" secondAttribute="leading" id="YDL-qj-ypQ"/>
+                            <constraint firstItem="XkE-55-27p" firstAttribute="top" secondItem="Vez-zq-8lI" secondAttribute="top" id="lfI-ZJ-gYL"/>
+                            <constraint firstItem="Vez-zq-8lI" firstAttribute="bottom" secondItem="XkE-55-27p" secondAttribute="bottom" id="tas-rG-oJ3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j5d-wu-tc3"/>
+                    <connections>
+                        <outlet property="collectionView" destination="XkE-55-27p" id="e9t-sQ-dO9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxf-bV-ELQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="771"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="1I3-fQ-QKT">
+            <objects>
+                <viewController id="VH4-MS-xYW" customClass="HomeVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="000-9P-TgA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xKV-JF-bCz">
+                                <rect key="frame" x="15" y="108" width="345" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-43-3RJ" customClass="RoundFillBtn" customModule="AnimeTvTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="35"/>
+                                        <state key="normal" title="Recent"/>
+                                        <connections>
+                                            <action selector="btnCategorySelected:" destination="VH4-MS-xYW" eventType="touchUpInside" id="jld-Wp-Gfa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yK0-dJ-l4B" customClass="RoundFillBtn" customModule="AnimeTvTracker" customModuleProvider="target">
+                                        <rect key="frame" x="78" y="0.0" width="60.666666666666657" height="35"/>
+                                        <state key="normal" title="On Air"/>
+                                        <connections>
+                                            <action selector="btnCategorySelected:" destination="VH4-MS-xYW" eventType="touchUpInside" id="ORa-CX-5rR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUl-f2-9Ud" customClass="RoundFillBtn" customModule="AnimeTvTracker" customModuleProvider="target">
+                                        <rect key="frame" x="148.66666666666666" y="0.0" width="75" height="35"/>
+                                        <state key="normal" title="Popular"/>
+                                        <connections>
+                                            <action selector="btnCategorySelected:" destination="VH4-MS-xYW" eventType="touchUpInside" id="5P4-7g-E8n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEw-ot-EMn" customClass="RoundFillBtn" customModule="AnimeTvTracker" customModuleProvider="target">
+                                        <rect key="frame" x="233.66666666666666" y="0.0" width="111.33333333333334" height="35"/>
+                                        <state key="normal" title="Top Rated"/>
+                                        <connections>
+                                            <action selector="btnCategorySelected:" destination="VH4-MS-xYW" eventType="touchUpInside" id="aWb-RG-813"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Hus-Ix-tNu"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cy1-BH-bMZ">
+                                <rect key="frame" x="0.0" y="163" width="375" height="546"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="20" id="xls-58-VhD">
+                                    <size key="itemSize" width="124" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="X3g-a6-oP1">
+                                        <rect key="frame" x="15" y="0.0" width="124" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Ml-v3-fQg">
+                                            <rect key="frame" x="0.0" y="0.0" width="124" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="124" height="128"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LNh-Ke-gfY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cy1-BH-bMZ" firstAttribute="top" secondItem="xKV-JF-bCz" secondAttribute="bottom" constant="20" id="ANW-wV-4nD"/>
+                            <constraint firstItem="Cy1-BH-bMZ" firstAttribute="leading" secondItem="xKV-JF-bCz" secondAttribute="leading" constant="-15" id="I1g-gn-9M1"/>
+                            <constraint firstItem="Cy1-BH-bMZ" firstAttribute="trailing" secondItem="xKV-JF-bCz" secondAttribute="trailing" constant="15" id="I6O-8W-J5h"/>
+                            <constraint firstItem="xKV-JF-bCz" firstAttribute="leading" secondItem="LNh-Ke-gfY" secondAttribute="leading" constant="15" id="IWI-Hr-acG"/>
+                            <constraint firstItem="xKV-JF-bCz" firstAttribute="top" secondItem="LNh-Ke-gfY" secondAttribute="top" constant="20" id="Ze2-aq-ibG"/>
+                            <constraint firstItem="LNh-Ke-gfY" firstAttribute="bottom" secondItem="Cy1-BH-bMZ" secondAttribute="bottom" constant="20" id="jDb-2j-Rgw"/>
+                            <constraint firstItem="LNh-Ke-gfY" firstAttribute="trailing" secondItem="xKV-JF-bCz" secondAttribute="trailing" constant="15" id="uL8-Qk-azc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nZr-a2-aFF"/>
+                    <connections>
+                        <outlet property="btn1" destination="NJB-43-3RJ" id="mxx-Nm-8uS"/>
+                        <outlet property="btn2" destination="yK0-dJ-l4B" id="OCk-tL-LHg"/>
+                        <outlet property="btn3" destination="EUl-f2-9Ud" id="MSb-gw-Not"/>
+                        <outlet property="btn4" destination="uEw-ot-EMn" id="phl-4Y-sug"/>
+                        <outlet property="collectionView" destination="Cy1-BH-bMZ" id="sbm-nt-eGu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsS-Yt-uyV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799.2" y="-698.27586206896558"/>
+        </scene>
+        <!--NavigationVC-->
+        <scene sceneID="hSU-eE-KQq">
+            <objects>
+                <navigationController id="eTX-ND-MhH" customClass="NavigationVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bI2-iN-3MM">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8it-HA-brQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G18-i1-lcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="33"/>
+        </scene>
+        <!--Tab BarVC-->
+        <scene sceneID="61C-L2-kiH">
+            <objects>
+                <tabBarController id="ZkR-hw-CEz" customClass="TabBarVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0Fo-Ug-1QU"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ooe-aK-gYM" customClass="CustomTabBar" customModule="AnimeTvTracker" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="Primary"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WZZ-0M-Ul5" kind="relationship" relationship="viewControllers" id="1dm-V5-h2d"/>
+                        <segue destination="ASb-xL-onu" kind="relationship" relationship="viewControllers" id="hnZ-Ul-erv"/>
+                        <segue destination="wkf-lq-E5U" kind="relationship" relationship="viewControllers" id="KFt-k2-i6k"/>
+                        <segue destination="PhJ-8W-VsE" kind="relationship" relationship="viewControllers" id="tDF-Wz-z5M"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xs5-G4-0OS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="34"/>
+        </scene>
+        <!--NavigationVC-->
+        <scene sceneID="s2y-3j-jgF">
+            <objects>
+                <navigationController id="PhJ-8W-VsE" customClass="NavigationVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Settings Icon" id="Mms-wG-ATs"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Y1-hJ-p4v">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Dx-hC-J02" kind="relationship" relationship="rootViewController" id="8j3-Qn-FSc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Kr-nD-tSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="1497"/>
+        </scene>
+        <!--NavigationVC-->
+        <scene sceneID="1ww-5y-Qko">
+            <objects>
+                <navigationController id="ASb-xL-onu" customClass="NavigationVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="0GG-7m-BFb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KkY-4g-j3D">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UNG-Q9-Tas" kind="relationship" relationship="rootViewController" id="OIT-1Q-iW1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eL0-Bt-QRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="33"/>
+        </scene>
+        <!--NavigationVC-->
+        <scene sceneID="LNJ-9Q-QhY">
+            <objects>
+                <navigationController id="wkf-lq-E5U" customClass="NavigationVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="heart.fill" catalog="system" id="mMD-Cm-Riq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WJ6-rw-OWQ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f6k-Cm-qEc" kind="relationship" relationship="rootViewController" id="jyj-H5-t0P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9j-N9-n0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="771"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="T6O-wp-bsL">
+            <objects>
+                <tableViewController title="Search" id="gqc-l3-5Th" customClass="SearchTVC" customModule="AnimeTvTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WUr-zh-Pjw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="anime.container.simple" textLabel="EQU-XG-ZM1" imageView="AiP-gC-8uL" style="IBUITableViewCellStyleDefault" id="4cv-Hd-ou8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4cv-Hd-ou8" id="Yur-kW-NCB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EQU-XG-ZM1">
+                                            <rect key="frame" x="61" y="0.0" width="298" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryText" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Clock Icon" id="AiP-gC-8uL">
+                                            <rect key="frame" x="16" y="6.6666666666666679" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gqc-l3-5Th" id="7Bt-gG-Qsv"/>
+                            <outlet property="delegate" destination="gqc-l3-5Th" id="X68-2F-MCn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Search" id="rKN-w8-uo2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Crv-SQ-QDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="33"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Clock Icon" width="30" height="30"/>
+        <image name="Settings Icon" width="25" height="25"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="Primary">
+            <color red="0.83529411764705885" green="0.082352941176470587" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

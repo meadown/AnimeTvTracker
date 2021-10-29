@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TvSummaryTCell" rowHeight="83" id="KGk-i7-Jjw" customClass="TvSummaryTCell" customModule="AnimeTvTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXA-Xb-nVd" userLabel="Actions Container">
+                        <rect key="frame" x="10" y="5" width="299" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-yx-coX">
+                                <rect key="frame" x="0.0" y="0.0" width="87" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="Primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLb-SK-9qq">
+                                <rect key="frame" x="205" y="5" width="94" height="30"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="16" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Expand">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="chevron.down" catalog="system" symbolScale="medium"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                                </state>
+                                <state key="selected" title="Collapse" image="chevron.down" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnExpandPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="G8d-9G-dzo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WOC-yx-coX" firstAttribute="top" secondItem="fXA-Xb-nVd" secondAttribute="top" id="ARi-dJ-mQp"/>
+                            <constraint firstItem="MLb-SK-9qq" firstAttribute="top" secondItem="fXA-Xb-nVd" secondAttribute="top" constant="5" id="HZ8-1D-Bgi"/>
+                            <constraint firstAttribute="trailing" secondItem="MLb-SK-9qq" secondAttribute="trailing" id="MpC-yI-bhh"/>
+                            <constraint firstItem="MLb-SK-9qq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WOC-yx-coX" secondAttribute="trailing" constant="8" id="XgP-HD-5tY"/>
+                            <constraint firstAttribute="bottom" secondItem="MLb-SK-9qq" secondAttribute="bottom" constant="5" id="cYW-rp-Buh"/>
+                            <constraint firstAttribute="bottom" secondItem="WOC-yx-coX" secondAttribute="bottom" id="dLi-E5-1MZ"/>
+                            <constraint firstItem="WOC-yx-coX" firstAttribute="leading" secondItem="fXA-Xb-nVd" secondAttribute="leading" id="ld8-0J-A9q"/>
+                            <constraint firstAttribute="height" constant="40" id="rCb-3T-cKM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="No Synopisis" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zRs-cO-nSS" userLabel="Synopsis Container">
+                        <rect key="frame" x="10" y="45" width="299" height="28"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="750" constant="150" id="UrY-ca-d4Q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fXA-Xb-nVd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Cl6-AK-VkI"/>
+                    <constraint firstAttribute="bottom" secondItem="zRs-cO-nSS" secondAttribute="bottom" constant="10" id="Iap-x2-9d5"/>
+                    <constraint firstAttribute="trailing" secondItem="fXA-Xb-nVd" secondAttribute="trailing" constant="10" id="KOb-aF-52Z"/>
+                    <constraint firstItem="fXA-Xb-nVd" firstAttribute="trailing" secondItem="zRs-cO-nSS" secondAttribute="trailing" id="ZjS-UX-6qF"/>
+                    <constraint firstItem="fXA-Xb-nVd" firstAttribute="leading" secondItem="zRs-cO-nSS" secondAttribute="leading" id="b0g-FX-3IL"/>
+                    <constraint firstItem="zRs-cO-nSS" firstAttribute="top" secondItem="fXA-Xb-nVd" secondAttribute="bottom" id="izY-QG-B6C"/>
+                    <constraint firstItem="fXA-Xb-nVd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nwV-5j-4lD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnExpand" destination="MLb-SK-9qq" id="EFb-We-biG"/>
+                <outlet property="synopsisHeight" destination="UrY-ca-d4Q" id="1OY-Jp-l70"/>
+                <outlet property="tvSummary" destination="zRs-cO-nSS" id="IaP-i0-syA"/>
+            </connections>
+            <point key="canvasLocation" x="-34.057971014492757" y="114.17410714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <namedColor name="Primary">
+            <color red="0.83529411764705885" green="0.082352941176470587" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
